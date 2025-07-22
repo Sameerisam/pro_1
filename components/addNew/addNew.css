@@ -1,0 +1,29 @@
+
+
+#third{
+   width: 20vw;
+     height: 30vh;
+      /* border: 1px solid blue; */
+   margin: auto;
+     font-family: sans-serif;
+   .transaction{
+      text-align: center;
+      font-size: large;
+   }
+   input{
+      width: 270px;
+      height: 30px;
+   }
+   .myButton{
+      text-align: center;
+      font-size: larger;
+      color: white;
+      background-color: rgb(176 196 222);
+      width: 274px;
+      height: 35px;
+      border: none;
+   }
+   #width{
+      height: 15px;
+   }
+}
