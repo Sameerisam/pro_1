@@ -11,12 +11,26 @@ export default function Belence() {
   });
 
 let income=0;
-let addIncome=transactions.filter((item)=>{
- return item.amount>0;
-})
-for( let item of addIncome){
-  income+=item.amount;
+let balance=0;
+let expense=0;
+
+for(let item of transactions){
+  if(item.amount>0){
+    income+=item.amount;
+  }
+  else{
+expense+=item.amount;
+  }
+  balance+=item.amount;
 }
+
+
+// let addIncome=transactions.filter((item)=>{
+//  return item.amount;
+// })
+// for( let item of addIncome){
+//   income+=item.amount;
+// }
 
 
   return (
@@ -24,7 +38,7 @@ for( let item of addIncome){
       <div>
         <h3 style={{ fontSize: "20px" }}>Expense Tracker by Sameer Ahmad</h3>
         <h4 className="mt-2">CURRENT BALANCE</h4>
-        <h3 style={{ fontSize: "20px" }}>${income}</h3>
+        <h3 style={{ fontSize: "20px" }}>${balance.toFixed(2)}</h3>
       </div>
 
       <div
@@ -35,7 +49,7 @@ for( let item of addIncome){
           backgroundColor: "whitesmoke",
         }}
       >
-        {/* <div style={{ height: "30px" }}></div> */}
+       
 
         <div className="d-flex justify-content-center gap-4">
           <h3 style={{ fontSize: "20px" }}>Income</h3>
@@ -49,8 +63,8 @@ for( let item of addIncome){
         </div>
 
         <div className="d-flex justify-content-center gap-5 mt-1">
-          <h3 style={{ color: "#b6960a", marginTop: "-25px", marginBottom: "-25px", fontSize: "20px" }}>${income}</h3>
-          <h3 style={{ color: "#2da3ad", marginTop: "-25px", marginBottom: "-25px", fontSize: "20px" }}>0.00</h3>
+          <h3 style={{ color: "#b6960a", marginTop: "-25px", marginBottom: "-25px", fontSize: "20px" }}>${income.toFixed(2)}</h3>
+          <h3 style={{ color: "#2da3ad", marginTop: "-25px", marginBottom: "-25px", fontSize: "20px" }}>${expense.toFixed(2)}</h3>
         </div>
       </div>
     </div>

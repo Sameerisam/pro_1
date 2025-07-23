@@ -29,7 +29,7 @@ export default function History() {
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#f9f9f9"}
           >
             <div className={item.amount > 0 ? "text-success" : "text-danger"}>
-              {item.description}: <strong>${item.amount}</strong>
+              {item.description}: <strong>${item.amount.toFixed(2)}</strong>
             </div>
             <button
               onClick={() => removeKray(transactions.length - 1 - index)} // reverse index
