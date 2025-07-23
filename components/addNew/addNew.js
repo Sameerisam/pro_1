@@ -16,58 +16,48 @@ export default function AddNew() {
     setAmount("")
    }
 
-
-  return (
-    <div
-      className="mx-auto"
-      style={{
-        width: "20vw",
-        height: "30vh",
-        fontFamily: "sans-serif",
+return (
+  <div
+    className="container text-center my-3"
+    style={{ fontFamily: "sans-serif", maxWidth: "400px" }}
+  >
+    <h3 className="fs-5">Add New Transaction</h3>
+    <hr />
+    <h4 className="fs-6 text-start">Description</h4>
+    <input
+      type="text"
+      placeholder="Detail of Transaction"
+      className="form-control mb-2"
+      value={description}
+      onChange={(e) => {
+        setDescription(e.target.value);
       }}
+    />
+
+    <h4 className="fs-6 text-start">Transaction Amount</h4>
+    <input
+      type="number"
+      placeholder="Dollar value of Transaction"
+      className="form-control mb-3"
+      value={amount}
+      onChange={(e) => {
+        setAmount(Number(e.target.value));
+      }}
+    />
+
+    <button
+      className="btn w-100"
+      style={{
+        backgroundColor: "rgb(176, 196, 222)",
+        height: "35px",
+        fontSize: "1.1rem",
+        color: "white",
+        border: "none",
+      }}
+      onClick={sendData}
     >
-      <h3 className="text-center fs-5">Add New Transaction</h3>
-      <hr />
-      <h4 className="fs-6">Description</h4>
-      <input
-        type="text"
-        placeholder="Detail of Transaction"
-        className="form-control mb-2"
-        style={{ width: "270px", height: "30px" }}
-        value={description}
-        onChange={(e)=>{
-          setDescription(e.target.value)
-        }}
-      />
-
-      <h4 className="fs-6">Transaction Amount</h4>
-      <input
-        type="number"
-        placeholder="Dollar value of Transaction"
-        className="form-control"
-        style={{ width: "270px", height: "30px" }}
-        value={amount}
-        onChange={(e)=>{
-          setAmount(Number(e.target.value))
-        }}
-      />
-
-      <div style={{ height: "15px" }}></div>
-
-      <button
-        className="btn"
-        style={{
-          backgroundColor: "rgb(176, 196, 222)",
-          width: "274px",
-          height: "35px",
-          fontSize: "1.1rem",
-          color: "white",
-          border: "none",
-        }}
-        onClick={sendData}
-      >
-        Add Transaction
-      </button>
-    </div>
-  );
+      Add Transaction
+    </button>
+  </div>
+);
 }

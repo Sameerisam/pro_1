@@ -34,7 +34,7 @@ expense+=item.amount;
 
 
   return (
-    <div className="container my-4 text-center" style={{ height: "40vh", width: "50vw", fontFamily: "sans-serif" }}>
+    <div className="container my-4 text-center" style={{  fontFamily: "sans-serif" }}>
       <div>
         <h3 style={{ fontSize: "20px" }}>Expense Tracker by Sameer Ahmad</h3>
         <h4 className="mt-2">CURRENT BALANCE</h4>
